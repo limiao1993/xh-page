@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <div class="logo" id="logo-top">
+        <div class="main">
+            <div class="logo_img left">
+                <a href="#"><img src="../img/logo.png" alt=""/></a>
+            </div>
+            <div class="logo_by left">
+                <div class="search">
+                    <div class="search-wrap">
+                        <input type="text" placeholder="请输入您想要的关键词" class="keyword"/>
+                    </div>
+                    <input type="submit" value="搜索" class="sub-btn"/>
+                </div>
+            </div>
+            <div class="logo_tel f_r">
+                    <a href="login.html"><img src="../img/shop_car.png" style=" vertical-align: baseline;"></a>
+                    <span><a href="login.html" style="text-decoration: none;">&nbsp;登录&nbsp;</a></span>
+                    <span><a href="register.html" style="text-decoration: none;">&nbsp;注册&nbsp;</a></span>
+            </div>
+            <div class="clear"></div>
+            <!--导航-->
+            <div class="nav">
+                <ul class="left">
+                    <li><a href="#">网站首页</a></li>
+                    <li><a href="product.html">特价鲜花</a></li>
+                    <li><a href="D:\000xianhua\xh\html/xuanhua.html">鲜花礼盒</a></li>
+                    <li><a href="#">爱情鲜花</a></li>
+                    <li><a href="#">开业鲜花</a></li>
+                    <li><a href="#">绿植鲜花</a></li>
+                    <li><a href="#">创意鲜花</a></li>
+                </ul>
+                <div class="nav_ls f_r">
+                    <a href="#">手机访问</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="jiaodian">
+        <!--菜单-->
+        <div id="main1" class="main1 main2">
+            <div class="menu-box menu-box1"></div>
+            <div id="menu-content" class="menu-content">
+                <span class="menu-title">
+                    <h4>特色服务</h4>
+                </span>
+                <div class="menu-item menu-item1"><a href="#" class="ico1"><span>情人节送花</span><i class="icon"></i></a></div>
+                <div class="menu-item menu-item1"><a href="#" class="ico1"><span>父亲节送花</span><i class="icon"></i></a></div>
+                <div class="menu-item menu-item1"><a href="#" class="ico1"><span>感恩节送花</span><i class="icon"></i></a></div>
+                <div class="menu-item menu-item1"><a href="#" class="ico1"><span>中秋节送花</span><i class="icon"></i></a></div>
+                <div class="menu-item menu-item1"><a href="#" class="ico1"><span>圣诞节送花</span><i class="icon"></i></a></div>
+                <div class="menu-item menu-item1"><a href="#" class="ico1"><span>光棍节送花</span><i class="icon"></i></a></div>
+            </div>
+        </div>
+        <!--lunbo-->
+        <div class="index_focus">
+            <div class="bd">
+                <ul class="img">
+                    <li><img src="../img/1-1G12QA2340-L.jpg" alt=""></li>
+                    <li><img src="../img/1-1G12QA2480-L.jpg" alt=""></li>
+                    <li><img src="../img/1-1G12QA3020-L.jpg" alt=""></li>
+                    <li><img src="../img/1-1G12QA3230-L.jpg" alt=""></li>
+                </ul>
+                <ul class="num">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="index_focus_pre">></div>
+            <div class="index_focus_next"><</div>
+        </div>
+            <script src="../js/jquery-1.11.3.js"></script>
+            <script>
+                //鼠标移入小圆点
+                $(".num>li").mouseenter(function(){
+                    i=$(this).index();//获取小圆点的下标值 index()下标值
+                    $(".num>li").eq(i).css('background','red').siblings().css('background','#aaa');
+                    $(".img>li").eq(i).fadeIn(200).siblings().fadeOut(200);
+                });
+                //图片轮播
+                var i=0;
+                var timer=setInterval(autoplay,1000);
+                function autoplay(){
+                    i++;
+                    if(i==4){i=0;};
+                    $(".num>li").eq(i).css('background','red').siblings().css('background','#aaa');
+                    $(".img>li").eq(i).fadeIn(200).siblings().fadeOut(200);//fadeIn 淡入淡出代替show hide
+                    console.log(i)
+                }
+                //鼠标经过大屏幕
+                $(".index_focus").mouseenter(function(){
+                    clearInterval(timer);//移入停止，所以先清理定时器
+                })
+                $(".index_focus").mouseleave(function(){
+                    timer=setInterval(autoplay,1000);//移出轮播。所以恢复定时器
+                })
+                </script>
+    </div>
+    <!--商品列表-->
+    <div class="main3">
+       
+           <ul class="tab">
+               <li class="active first" ><a href="#">特价鲜花</a></li>
+               <li class="two"><a href="#">精品推荐</a></li>
+               <li class="thrid"><a href="#">热销商品</a></li>
+           </ul>
+           <script>
+               $(".tab>li").mouseover(function(){
+                   $(this).addClass("active").siblings().removeClass();
+               })
+           </script>
+           <div class="main3-list">
+               <div class="content1">  
+                   <ul>
+                       <li>
+                            <div class="list">
+                                <div class="img"><img src="../img/1-1FH6203G7.jpg" alt=""></div>
+                                <p class="info  name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                <p class="pre"> ￥199</p>
+                            </div>
+                       </li>
+                       <li>
+                            <div class="list">
+                                <div class="img"><img src="../img/1-1FH6204021.jpg" alt=""></div>
+                                <p class="info  name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                <p class="pre"> ￥199</p>
+                            </div>
+                       </li>
+                       <li>
+                            <div class="list">
+                                <div class="img"><img src="../img/1-1FH6204209.jpg" alt=""></div>
+                                <p class="info name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                <p class="pre">￥199</p>
+                            </div>
+                       </li>
+                       <li>
+                            <div class="list">
+                                <div class="img"><img src="../img/1-1G1291026240-L.jpg" alt=""></div>
+                                <p class="info  name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                <p class="pre">￥199</p>
+                            </div>
+                       </li>
+                       <li>
+                            <div class="list">
+                                <div class="img"><img src="../img/1-1G12Z933200-L.jpg" alt=""></div>
+                                <p class="info  name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                <p class="pre">￥199</p>
+                            </div>
+                       </li>
+                   </ul>
+               </div>
+               <div  class="content2">
+                    <ul>
+                            <li>
+                                 <div class="list">
+                                     <div class="img"><img src="../img/1-1FH62125370-L.jpg" alt=""></div>
+                                     <p class="info  name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                     <p class="pre"> ￥199</p>
+                                 </div>
+                            </li>
+                            <li>
+                                 <div class="list">
+                                     <div class="img"><img src="../img/1-1FH62129400-L.jpg" alt=""></div>
+                                     <p class="info  name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                     <p class="pre"> ￥199</p>
+                                 </div>
+                            </li>
+                            <li>
+                                 <div class="list">
+                                     <div class="img"><img src="../img/1-1FH62130480-L.jpg" alt=""></div>
+                                     <p class="info name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                     <p class="pre">￥199</p>
+                                 </div>
+                            </li>
+                            <li>
+                                 <div class="list">
+                                     <div class="img"><img src="../img/1-1FH62131490-L.jpg" alt=""></div>
+                                     <p class="info  name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                     <p class="pre">￥199</p>
+                                 </div>
+                            </li>
+                            <li>
+                                 <div class="list">
+                                     <div class="img"><img src="../img/1-1FH62133290-L.jpg" alt=""></div>
+                                     <p class="info  name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                     <p class="pre">￥199</p>
+                                 </div>
+                            </li>
+                        </ul>
+               </div>
+               <div class="content3">  
+                    <ul>
+                        <li>
+                             <div class="list">
+                                 <div class="img"><img src="../img/1-1FH6203G7.jpg" alt=""></div>
+                                 <p class="info  name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                 <p class="pre"> ￥199</p>
+                             </div>
+                        </li>
+                        <li>
+                             <div class="list">
+                                 <div class="img"><img src="../img/1-1FH6204021.jpg" alt=""></div>
+                                 <p class="info  name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                 <p class="pre"> ￥199</p>
+                             </div>
+                        </li>
+                        <li>
+                             <div class="list">
+                                 <div class="img"><img src="../img/1-1FH6204209.jpg" alt=""></div>
+                                 <p class="info name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                 <p class="pre">￥199</p>
+                             </div>
+                        </li>
+                        <li>
+                             <div class="list">
+                                 <div class="img"><img src="../img/1-1G1291026240-L.jpg" alt=""></div>
+                                 <p class="info  name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                 <p class="pre">￥199</p>
+                             </div>
+                        </li>
+                        <li>
+                             <div class="list">
+                                 <div class="img"><img src="../img/1-1G12Z933200-L.jpg" alt=""></div>
+                                 <p class="info  name"><a href="#">爱我所爱云南顶级白色</a></p>
+                                 <p class="pre">￥199</p>
+                             </div>
+                        </li>
+                    </ul>
+                </div>
+           </div>
+           <script>
+                //$().find(selector) 在所有后代中查找符合selector要求的子元素，必须提供selector参数
+                $('ul.tab>li').hover(function () {
+                    var i =$(this).index();
+                    $('div.main3-list>div').eq(i).show().siblings('div').hide();
+                })
+           </script>
+    </div>
+    <!--楼层-->
+    <!--1f-->
+    <div class="w plist">
+        <div class="title-1" id="div1">
+            <span><a href="">1F鲜花礼盒/让你怦然心动</a></span>
+            <a href="" class="more">更多</a>
+        </div>
+        <div class="subplist">
+            <div class="goodlist">
+                <ul>
+                    <li>
+                        <div class="list">
+                            <div class="img">
+                                <a href="product-info.html"><img src="../img/1-1FH62125370-L.jpg" alt=""></a>
+                                <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                            </div>
+                            <div class="goodName">
+                                <p class="info  name"><a href="#">爱丽丝</a></p>
+                                <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                <p class="pre"> ￥199</p>
+                            </div>
+                        </div>  
+                    </li>
+                    <li>
+                        <div class="list">
+                            <div class="img">
+                                <a><img src="../img/1-1FH6212I20-L.jpg" alt=""></a>
+                                 <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                            </div>
+                            <div class="goodName">
+                                <p class="info  name"><a href="#">月吟*粉色玫瑰x19枝</a></p>
+                                <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                <p class="pre"> ￥199</p>
+                            </div>
+                        </div>  
+                    </li>
+                    <li>
+                        <div class="list">
+                            <div class="img">
+                                <a><img src="../img/1-1FH62129400-L.jpg" alt=""></a>
+                                <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                            </div>
+                            <div class="goodName">
+                                <p class="info  name"><a href="#">绚烂多姿*香槟色玫瑰x33 枝</a></p>
+                                <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                <p class="pre"> ￥199</p>
+                            </div>
+                        </div>  
+                    </li>
+                    <li>
+                        <div class="list">
+                            <div class="img">
+                                <a><img src="../img/1-1FH62130480-L.jpg" alt=""></a>
+                                 <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                            </div>
+                            <div class="goodName">
+                                 <p class="info  name"><a href="#">情真如初*香槟玫瑰x33枝</a></p>
+                                <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                <p class="pre"> ￥199</p>
+                            </div>
+                         </div>  
+                    </li>
+                    <li>
+                        <div class="list">
+                            <div class="img">
+                                <a><img src="../img/1-1FH62150350-L.png" alt=""></a>
+                                  <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                             </div>
+                             <div class="goodName">
+                                <p class="info  name"><a href="#">忘情巴黎&粉色、香槟玫瑰x33枝</a></p>
+                                <p class="info-prive"><a>中国鲜花速递连锁品牌</a>></p>
+                                <p class="pre"> ￥199</p>
+                            </div>
+                        </div>  
+                    </li>
+                    <li>
+                        <div class="list">
+                            <div class="img">
+                                <a><img src="../img/1-1FH62150140-L.png" alt=""></a>
+                                 <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                            </div>
+                            <div class="goodName">
+                                <p class="info  name"><a href="#">忘情巴黎&粉色、香槟玫瑰x33枝</a></p>
+                                <p class="info-prive"><a>中国鲜花速递连锁品牌</a>></p>
+                                <p class="pre"> ￥199</p>
+                            </div>
+                        </div>  
+                    </li>
+                    <li>
+                        <div class="list">
+                            <div class="img">
+                                <a><img src="../img/1-1FH62149250-L.png" alt=""></a>
+                                 <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                            </div>
+                            <div class="goodName"> 
+                                <p class="info  name"><a href="#">纯静如水_11枝粉玫瑰预订</a></p>
+                                <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                <p class="pre"> ￥199</p>
+                            </div>
+                         </div>  
+                    </li>
+                    <li>
+                        <div class="list">
+                            <div class="img">
+                                <a><img src="../img/1-1FH62119390-L.jpg" alt=""></a>
+                                 <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                            </div>
+                            <div class="goodName">
+                                <p class="info  name"><a href="#">进口郁金香鲜花芍药混搭花束</a></p>
+                                <p class="info-prive"><a>中国鲜花速递连锁品牌</a>></p>
+                                <p class="pre"> ￥199</p>
+                            </div>
+                        </div>  
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <script>
+        /*    
+        $(".goodlist .list .img img").mouseover(function(){
+            $(".tanchu").show();
+        })*/
+        </script>
+    </div>
+    <div class="clear"></div>
+    <!--2f-->
+    <div class="w plist" style="margin-top:390px;">
+            <div class="title-1 yellow" id="div2">
+                    <span ><a href="#">2F 爱情鲜花 / 许·她一生承诺</a></span>
+                    <a href="#" class="more">更多</a>
+            </div>
+            <div class="subplist">
+                    <div class="goodlist">
+                        <ul>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH6203T9.jpg" alt=""></a>
+                                        <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                        <p class="info  name"><a href="#">戴安娜粉玫瑰x19枝</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> ￥299</p>
+                                    </div>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH62114050-L.jpg" alt=""></a>
+                                         <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                        <p class="info  name"><a href="#">公仔创意花束-关节熊5只＋</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> ￥289</p>
+                                    </div>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH62115270-L.jpg" alt=""></a>
+                                        <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                        <p class="info  name"><a href="#">公仔创意花束-紫色小熊</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> ￥299</p>
+                                    </div>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH6211I80-L.jpg" alt=""></a>
+                                         <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                         <p class="info  name"><a href="#">品牌metoo梦幻黄布偶娃娃</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> ￥399</p>
+                                    </div>
+                                 </div>  
+                            </li>
+                    </div>
+                </div>
+    </div>
+    <!--3f-->
+    <div class="w plist">
+            <div class="title-1 blue" id="div3">
+                    <span ><a href="#">3F开业鲜花/送最美的礼物</a></span>
+                    <a href="#" class="more">更多</a>
+            </div>
+            <div class="subplist">
+                    <div class="goodlist">
+                        <ul>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH62131490-L.jpg" alt=""></a>
+                                        <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                        <p class="info  name"><a href="#">花开富贵</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> ￥199</p>
+                                    </div>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH62133290-L.jpg" alt=""></a>
+                                         <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                        <p class="info  name"><a href="#">喜气洋洋</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> ￥289</p>
+                                    </div>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH62134240-L.jpg" alt=""></a>
+                                        <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                        <p class="info  name"><a href="#">步步高升</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> ￥299</p>
+                                    </div>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH62136270-L.png" alt=""></a>
+                                         <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                         <p class="info  name"><a href="#">飞黄腾达</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> 199</p>
+                                    </div>
+                                 </div>  
+                            </li>
+                    </div>
+                </div>
+    </div>
+    <!--4f-->
+    <div class="w plist">
+            <div class="title-1 green" id="div4">
+                    <span ><a href="#"> 4F 绿植鲜花 / 送·最美的礼物</a></span>
+                    <a href="#" class="more">更多</a>
+            </div>
+            <div class="subplist">
+                    <div class="goodlist">
+                        <ul>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH6213I10-L.png" alt=""></a>
+                                        <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                        <p class="info  name"><a href="#">鸿运当头</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> ￥199</p>
+                                    </div>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH6213Z70-L.png" alt=""></a>
+                                         <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                        <p class="info  name"><a href="#">红掌</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> ￥289</p>
+                                    </div>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH62139440-L (1).png" alt=""></a>
+                                        <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                        <p class="info  name"><a href="#">火鹤花</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> ￥299</p>
+                                    </div>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH62140140-L (1).png" alt=""></a>
+                                         <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                         <p class="info  name"><a href="#">绿植鲜花</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> 199</p>
+                                    </div>
+                                 </div>  
+                            </li>
+                    </div>
+                </div>
+    </div>
+    <!--5f-->
+    <div class="w plist">
+            <div class="title-1 purple" id="div5">
+                    <span ><a href="#">  5F 创意鲜花 / 想·前生的之缘</a></span>
+                    <a href="#" class="more">更多</a>
+            </div>
+            <div class="subplist">
+                    <div class="goodlist">
+                        <ul>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH62149250-L.png" alt=""></a>
+                                        <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                        <p class="info  name"><a href="#">爱的理由</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> ￥199</p>
+                                    </div>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH62150140-L (1).png" alt=""></a>
+                                         <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                        <p class="info  name"><a href="#">粉红恋人</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> ￥289</p>
+                                    </div>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH62150350-L (1).png" alt=""></a>
+                                        <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                        <p class="info  name"><a href="#">清香四溢</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> ￥299</p>
+                                    </div>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="list">
+                                    <div class="img">
+                                        <a><img src="../img/1-1FH62151510-L (1).jpg" alt=""></a>
+                                         <!--<div class="tanchu" style="bottom:-70px">...</div>-->
+                                    </div>
+                                    <div class="goodName">
+                                         <p class="info  name"><a href="#">进口永生玫瑰＋唯爱S925银锁骨项链</a></p>
+                                        <p class="info-prive"><a>中国鲜花速递连锁品牌</a></p>
+                                        <p class="pre"> 399</p>
+                                    </div>
+                                 </div>  
+                            </li>
+                    </div>
+                </div>
+    </div>
+    <div class="ad_bg">
+        <img src="../img/ad.jpg" alt="">
+    </div>
+    <div class="clear"></div>
+		<!--侧边楼层滚动-->
+    <div class="lift">
+        <ul class="lift-list">
+            <li class="lift-item lift-item-first reds"><a href="#div1" class="lift_btn"><span class="btn_txt
+                ">1F</span></a></li>
+            <li class="lift-item J_liftt_list"><a href="#div2" class="lift_btn"><span class="btn_txt">2F</span></a></li>
+            <li class="lift-item J_liftt_list"><a href="#div3" class="lift_btn"><span class="btn_txt">3F</span></a></li>
+            <li class="lift-item J_liftt_list"><a href="#div4" class="lift_btn"><span class="btn_txt">4F</span></a></li>
+            <li class="lift-item J_liftt_list"><a href="#div5" class="lift_btn"><span class="btn_txt">5F</span></a></li>
+            <li class="lift-item lift-item-top"><a href="#logo-top" class="lift_btn"><span class="btn_txt">返回顶部 </span></a></li>
+        </ul>
+    </div>
+    <!--footer-->
+    <footer>
+        <div class="footer-icon">
+          <div class="w"> <a rel="nofollow" class="icon-map">
+            <p class="icon-bg i1"></p>
+            <p class="icon-title">品牌保证</p>
+            </a><a rel="nofollow" class="icon-map">
+            <p class="icon-bg i3"></p>
+            <p class="icon-title">优质新鲜</p>
+            </a><a rel="nofollow" class="icon-map">
+            <p class="icon-bg i4"></p>
+            <p class="icon-title">金牌商家</p>
+            </a><a rel="nofollow" class="icon-map">
+            <p class="icon-bg i5"></p>
+            <p class="icon-title">低价保障</p>
+            </a><a rel="nofollow" class="icon-map">
+            <p class="icon-bg i6"></p>
+            <p class="icon-title">优先配送</p>
+            </a><a rel="nofollow" class="icon-map">
+            <p class="icon-bg i7"></p>
+            <p class="icon-title">支付安全</p>
+            </a><a rel="nofollow" class="icon-map">
+            <p class="icon-bg i8"></p>
+            <p class="icon-title">万千口碑</p>
+            </a> </div>
+        </div>
+        <div class="main">
+          <div class="ft_intr cf">
+            <div class="ft_intr_l">
+              <dl>
+                <dt>购物指南</dt>
+                <dd><a href="/a/goumaizhinan/" title="购买指南">购买指南</a></dd><dd><a href="/a/changjianwenti/" title="常见问题">常见问题</a></dd><dd><a href="/a/jiaoyitiaokuan/" title="交易条款">交易条款</a></dd>
+              </dl>
+              <dl>
+                <dt>支付方式</dt>
+                <dd><a href="/a/huodaofukuan/" title="货到付款">货到付款</a></dd><dd><a href="/a/mendianzhifu/" title="门店支付">门店支付</a></dd><dd><a href="/a/zaixianzhifu/" title="在线支付">在线支付</a></dd>
+              </dl>
+            </div>
+            <div class="ft_intr_m">
+              <div><img src="../img/tel.jpg" width="199" height="24" alt=""></div>
+              <div class="mt10 g6">24小时在线 随时为您服务</div>
+              <div><img src="../img/weixin.jpg" width="100" height="100" alt=""></div>
+            </div>
+            <div class="ft_intr_r">
+              <dl>
+                <dt>配送方式</dt>
+                <dd><a href="/a/qianchengdangrida/" title="千城当日达">千城当日达</a></dd><dd><a href="/a/mendianziti/" title="门店自提">门店自提</a></dd><dd><a href="/a/disanfangpeisong/" title="第三方配送">第三方配送</a></dd><dd><a href="/a/1xiaoshijiajisong/" title="1小时加急送">1小时加急送</a></dd>
+              </dl>
+              <dl>
+                <dt>售后服务</dt>
+                <dd><a href="/a/fuwulinian/" title="服务理念">服务理念</a></dd><dd><a href="/a/tuihuanzhengce/" title="退换政策">退换政策</a></dd><dd><a href="/a/lianxikefu/" title="联系客服">联系客服</a></dd>
+              </dl>
+            </div>
+          </div>
+          <div class="ft_addr">
+            <div class="footlink"> <a href="/" rel="nofollow">网站首页</a> <a href="/a/goumaizhinan/" rel="nofollow" title="新手指南">新手指南</a><a href="/a/zhifugoumai/" rel="nofollow" title="支付购买">支付购买</a><a href="/a/peisongfangshi/" rel="nofollow" title="配送方式">配送方式</a><a href="/a/shouhoufuwu/" rel="nofollow" title="售后服务">售后服务</a> </div>
+            <div class="g9">Copyright &copy; 2002-2017 鲜花速递商城 版权所有 <a href="http://www.dede58.com" target="_blank">Power by DeDe58</a>   备案号：粤ICP备65498754号</div>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

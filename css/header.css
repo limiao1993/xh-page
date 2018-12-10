@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 0;
+}
+.logo{
+    border-bottom:2px solid #ed2d38;
+}
+.main{
+    width: 1210px;
+    margin: auto;
+}
+.logo_img{
+    margin-top: 10px;
+}
+.left{
+    float: left;
+}
+.logo_img a{
+    color: #666;
+    text-decoration: none;
+}
+.logo_img img{
+    overflow: hidden;
+    vertical-align: top;
+}
+.logo_by{
+    margin: 30px 0 0 150px;
+}
+.search{
+    height: 40px;
+    position: relative;
+    width: 461px;
+    z-index: 105;
+}
+.search-wrap{
+    height: 34px;
+    border: 2px solid #ed2d38;
+}
+.keyword{
+    color:#909090;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    padding: 0;
+    width: 358px;
+    text-indent: 35px;
+    background:url("../img/searchbg.gif") no-repeat 10px 70px;
+}
+.sub-btn{
+    cursor: pointer;
+    height: 34px;
+    overflow: hidden;
+    width: 90px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    color: #ffffff;
+    transition: all .2s ease-in-out;
+    background: #ed2d38;
+}
+.logo_tel{
+    margin-top: 32px;
+    float: right;
+}
+.logo_tel span{
+    display:block;
+    float: left;
+    margin-right: 5px;
+    padding-top: 3px;
+}
+.logo_tel i{
+    color: #616161;
+    display: block;
+    height: 6px;
+    background: url("../img/t1.png") no-repeat ;
+}
+.logo_tel em{
+    font-size:17px;
+    color: #616161;
+    font-style: normal;
+    height: 16px;
+}
+.logo_tel b{
+    display:block;
+    float: left;
+    color:#ed2d38;
+    font-size: 30px;
+    font-family:Arial ;
+}
+.clear{
+    clear: both;
+}
+.nav{
+    margin-left: 280px;
+    margin-top: 15px;
+}
+ul.left{
+    float: left;
+    list-style: none;
+}
+.nav ul li{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    display: list-item;
+}
+.nav ul li a{
+    display:block;
+   padding: 0 20px;
+    font-size: 16px;
+    color: #666666;
+    text-decoration: none;
+}
+.nav ul li a:hover{
+    color: #ed2d38;
+}
+.nav ul:after{
+    display:block;
+    content: "";
+    clear: both;
+}
+.nav_ls{
+    background: url("../img/ls.png") no-repeat left 5px;
+    padding-left: 50px;
+    height: 40px;
+    float: right;
+}
+.nav_ls a{
+    display:block;
+    width: 100px;
+    height: 26px;
+    line-height: 26px;
+    background-color:#ed2d38;
+    text-align: center;
+    color:#ffffff;
+    margin-top: 14px;
+    text-decoration: none;
+}
+.jiaodian{
+    width: 100%;
+    position: relative;
+}
+.main2{
+    height:0;
+    cursor: pointer;
+}
+.main1{
+    position: absolute;
+    width: 244px;
+    left: 50%;
+    margin-left: -605px;
+}
+.jiaodian .main2 .menu-box1{
+   background: #333;
+}
+.menu-box1{
+    display: none;
+}
+.menu-box{
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 244px;
+    height: 450px;
+    z-index: 1;
+    opacity: 0.7;
+}
+.menu-content{
+    position: absolute;
+    left: 0;
+    top: -42px;
+    width:244px;
+    z-index: 2;
+}
+.menu-title{
+    height: 40px;
+    display:block;
+    width: 100%;
+    background: url("../img/btitle.png") no-repeat #ed2d38 25px center;
+}
+.menu-title h4{
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    font-weight: normal;
+    font-size: 16px;
+    background: url("../img/bdown.png") no-repeat 200px center;
+}
+.menu-item1{
+    display: none;
+}
+.menu-item{
+    height: 75px;
+    line-height: 75px;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+}
+.menu-item a{
+    display:block;
+    color: #ffffff;
+    padding: 0 8px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+.menu-item span{
+    display: block;
+}
+.menu-item span:hover{
+    background: pink !important;
+    width: 100%;
+}
+.ico1{
+    background: url("../img/ico1.png") 40px center no-repeat;
+}
+.menu-item i{
+    position: absolute;
+    right: 52px;
+    color: rgba(255,255,255,0.8);
+    font-size: 32px;
+    top: 0px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: "iconfont";
+}
+.jiaodian .main2:hover{
+    height: 450px;
+    z-index: 9999;
+}
+.main2:hover .menu-item1{
+    display:block;
+}
+.menu-item a:hover{
+    text-decoration: none;
+}
+.main2:hover .menu-box1{
+    display: block;
+}
